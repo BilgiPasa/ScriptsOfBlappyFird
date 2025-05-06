@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class ObstacleGenerator : MonoBehaviour
 {
+    //* Don't forget to make Fixed Timestep as 0.005
+
     int generationRate = 250;
     int timer;
     [SerializeField] GameObject pipePrefab;

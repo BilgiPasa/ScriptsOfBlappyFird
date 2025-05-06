@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class ObstacleManager : MonoBehaviour
 {
+    //* Don't forget to make Fixed Timestep as 0.005
+
     float moveSpeed = 0.25f;
 
     void FixedUpdate()
