@@ -74,7 +74,21 @@ public class FirdBlapManager : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D other)
+
+    void OnCollisionEnter2D(Collision2D collision) // For walls
+    {
+        if (!collision.gameObject.CompareTag("GroundOrRoof"))
+        {
+            GameEnd();
+        }
+    }
+    // I made 2 different collision detections to prevent a visual and a game bug.
+    void OnCollisionStay2D(Collision2D collision) // For ground, roof and walls
+    {
+        GameEnd();
+    }
+
+    void GameEnd()
     {
         gameStarted = false;
         gameEnded = true;

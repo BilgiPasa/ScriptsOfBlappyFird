@@ -5,7 +5,7 @@ public class PauseMenuManager : MonoBehaviour
     public static bool gamePaused;
     KeyCode PauseKey = KeyCode.Escape;
     [SerializeField] GameObject pauseMenu;
-    [SerializeField] Rigidbody2D FirdRb;
+    [SerializeField] Rigidbody2D firdRigidbody;
 
     void Start()
     {
@@ -14,7 +14,7 @@ public class PauseMenuManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(PauseKey) && !gamePaused && FirdRb.gravityScale == 4 && !FirdBlapManager.gameEnded)
+        if (Input.GetKeyDown(PauseKey) && !gamePaused && firdRigidbody.gravityScale == 4 && !FirdBlapManager.gameEnded)
         {
             Pause();
         }
